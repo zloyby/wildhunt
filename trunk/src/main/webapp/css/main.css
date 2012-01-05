@@ -2,15 +2,25 @@ body {
     margin: 0 auto;
     width: 1000px;
     position: relative;
-    background-color:#183086;
+    background-color: #183086;
 }
 
-a:link { color: #FAE17A; }
-a:visited { color: #FAE17A; }
-a:active { color: #FAE17A; }
+a:link {
+    color: #FAE17A;
+}
 
-a img { border: none; }
+a:visited {
+    color: #FAE17A;
+}
+
+a:active {
+    color: #FAE17A;
+}
+
+a img {
+    border: none;
+}
 
 .calendar {
-    width: 30em;
+    width: 11em;
 }
