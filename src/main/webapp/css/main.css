@@ -3,6 +3,7 @@ body {
     width: 1000px;
     position: relative;
     background-color: #183086;
+    color: #D4D7DE;
 }
 
 a:link {
@@ -21,6 +22,32 @@ a img {
     border: none;
 }
 
-.calendar {
-    width: 11em;
+.header {
 }
+
+.left-div {
+    float: left;
+}
+
+.calendar {
+    width: 15em;
+}
+
+.latest-news {
+    font-size: small;
+    background-color: #234567;
+}
+
+.borders {
+    background-color: #234543;
+}
+
+.right-div {
+
+}
+
+.footer {
+    clear: both;
+    text-align: center;
+}
+
