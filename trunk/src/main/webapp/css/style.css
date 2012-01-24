@@ -343,14 +343,12 @@ Author: eugene kozlov
 ========================================================================== */
 
 footer .col:first-child {
-    padding: 0;
-    text-align: justify;
     width: 63%;
 }
 
 footer .col {
-    padding: 0 10px;
     line-height: 20px;
+    text-align: justify;
     float: left;
     width: 32%;
 }
@@ -359,9 +357,13 @@ footer .col {
     background: none repeat scroll 0 0 #1E3A56;
 }
 
-#header-container p{
+#footer-container footer {
+    color: #cccccc;
+}
+
+#header-container span {
     font-size: 0.5em;
-    margin: 0;
+    margin: 0 0 0 20px;
 }
 
 /* ===================================================
@@ -403,7 +405,7 @@ body {
 
 #title {
     color: white;
-    margin: 18px 0 4px 0;
+    margin: 14px 0 4px 0;
 }
 
 ::-moz-selection {
@@ -459,11 +461,6 @@ nav a:hover {
     color: white;
     padding: 0px 5% 10px;
     margin-top: 10px;
-}
-
-#footer-container footer {
-    color: #cccccc;
-    height: 10em;
 }
 
 /* ===============
