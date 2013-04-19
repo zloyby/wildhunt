@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
+<!-- /Added by HTTrack -->
+<head>
+	<meta charset="utf-8"/>
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width"/>
+
+	<title>Studio 932</title>
+
+	<!-- Included CSS Files (Uncompressed) -->
+	<!--
+	<link rel="stylesheet" href="stylesheets/foundation.css">
+	-->
+
+
+	<link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
+
+	<!-- Included CSS Files (Compressed) -->
+	<link rel="stylesheet" href="stylesheets/foundation.css">
+	<link rel="stylesheet" href="stylesheets/app.css">
+
+	<link rel="stylesheet" type="text/css" href="stylesheets/responsiveslides.css"/>
+	<!--Slider1 css-->
+	<link rel="stylesheet" type="text/css" href="stylesheets/elastislide.css"/>
+	<!--Slider2 css-->
+	<link rel="stylesheet" href="stylesheets/lightbox.css"/>
+	<!--Lightbox css-->
+	<link rel="stylesheet" href="stylesheets/media.css">
+	<!-- dd -->
+
+	<!-- Javascripts-->
+	<script type="text/javascript" src="../../ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+	<!--Drop navigation-->
+	<script>
+		$("<select />").appendTo("nav");
+		$("<option />", {
+			"selected": "selected",
+			"value": "",
+			"text": "Go to..."
+		}).appendTo("nav select");
+		$("nav a").each(function () {
+			var el = $(this);
+			$("<option />", {
+				"value": el.attr("href"),
+				"text": el.text()
+			}).appendTo("nav select");
+		});
+	</script>
+	<!--End drop navigation-->
+
+	<!--Slider1 js-->
+	<script src="javascripts/responsiveslides.min.js"></script>
+	<script>
+		$(function () {
+			$(".rslides").responsiveSlides({
+				auto: false,             // Boolean: Animate automatically, true or false
+				speed: 1000,            // Integer: Speed of the transition, in milliseconds
+				timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
+				nav: true,             // Boolean: Show navigation, true or false
+				prevText: "Previous",   // String: Text for the "previous" button
+				nextText: "Next",       // String: Text for the "next" button
+				maxwidth: "1120px",           // Integer: Max-width of the slideshow, in pixels
+				controls: "",           // Selector: Where controls should be appended to, default is after the 'ul'
+				namespace: "callbacks",   // String: change the default namespace used
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},   // Function: Before callback
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}     // Function: After callback
+			});
+		});
+	</script>
+	<!--End slider1 js-->
+
+	<!--Slider2 js-->
+	<script src="javascripts/modernizr.custom.17475.js"></script>
+	<script type="text/javascript" src="javascripts/jquerypp.custom.js"></script>
+	<script type="text/javascript" src="javascripts/jquery.elastislide.js"></script>
+	<!--End slider2 js-->
+
+	<!--Navigation js-->
+	<script src="jquery.html"></script>
+	<script src="javascripts/jquery.sticky.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("header").sticky({topSpacing: 0});
+		});
+	</script>
+	<!--End navigation js-->
+
+	<!--smooth scroll js-->
+	<script src="javascripts/scrolling.js"></script>
+
+	<!--twitter js-->
+	<script src="javascripts/lasttweet.js"></script>
+
+	<!--lightbox js-->
+	<script src="javascripts/lightbox.js"></script>
+
+</head>
+<body>
+<div id="home">
+</div>
+<!-- Header and Nav -->
+<header id="header">
+	<div class="row">
+		<div class="five columns">
+			<img src="images/logo.png" alt=""/>
+		</div>
+		<div class="seven columns">
+
+			<nav>
+				<ul class="right">
+					<li class="active"><a href="#home" class="scroll">Home</a></li>
+					<li><a href="#pricing" class="scroll">Pricing</a></li>
+					<li><a href="#team" class="scroll">Our team</a></li>
+					<li><a href="#about" class="scroll">About</a></li>
+					<li><a href="#contact" class="scroll">Contact</a></li>
+				</ul>
+
+				<select>
+					<option value="" class="scroll">Navigation</option>
+					<option value="#home" class="scroll">Home</option>
+					<option value="#pricing" class="scroll">Pricing</option>
+					<option value="#team" class="scroll">Our team</option>
+					<option value="#about" class="scroll">About</option>
+					<option value="#contact" class="scroll">Contact</option>
+				</select>
+			</nav>
+		</div>
+	</div>
+</header>
+<!-- End Header and Nav -->
+
+
+<!-- Slider -->
+<section id="slider">
+	<div class="row">
+		<div class="twelve column">
+			<div id="wrapper">
+				<div class="callbacks_container">
+					<ul class="rslides">
+						<li>
+							<img src="images/slider1/1.jpg" alt=""/>
+
+							<div class="slidetext">
+								<h1> ACHIEVE YOUR GOALS everyday! </h1>
+
+								<p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
+									neque felis, vel interdum odio. Proin quam libero, fermentum sed elementum a,
+									vehicula et metus. Donec eu augue varius nisi consecteturs.</p>
+							</div>
+						</li>
+						<li><img src="images/slider1/2.jpg" alt=""/>
+
+							<div class="slidetext">
+								<h1 class="dark"> Everyday acting training </h1>
+
+								<p class="caption dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam
+									ac neque felis, vel interdum odio. Proin quam libero, fermentum sed elementum a,
+									vehicula et metus. Donec eu augue varius nisi consecteturs.</p>
+							</div>
+						</li>
+
+						<li><img src="images/slider1/3.jpg" alt=""/>
+
+							<div class="slidetext">
+								<h1>Model training with personal coach</h1>
+
+								<p class="caption">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac
+									neque felis, vel interdum odio. Proin quam libero, fermentum sed elementum a,
+									vehicula et metus. Donec eu augue varius nisi consecteturs.</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End slider -->
+
+
+<!-- Pricing -->
+<section id="pricing">
+
+	<div class="row">
+
+		<div class="four column">
+			<div class="price-icon">
+				<img src="images/pricing/price_1.png" alt=""/>
+			</div>
+			<div class="price-desc">
+				<h3>Acting Training</h3>
+
+				<p>Maecenas pharetra rhoncus enim quis faucibus. Morbi nisi arcu, rutrum sit amet ornare sed, pharetra
+					non erat. Nunc eget nisl tellus.</p>
+
+				<p class="price_1">$200 month / <span class="price_2">$1800 year</span></p>
+			</div>
+		</div>
+
+		<div class="four column">
+			<div class="price-icon">
+				<img src="images/pricing/price_2.png" alt=""/>
+			</div>
+			<div class="price-desc">
+				<h3>Fitness and pilates</h3>
+
+				<p>Maecenas pharetra rhoncus enim quis faucibus. Morbi nisi arcu, rutrum sit amet ornare sed, pharetra
+					non erat. Nunc eget nisl tellus.</p>
+
+				<p class="price_1">$300 month / <span class="price_2">$2100 year</span></p>
+			</div>
+		</div>
+
+
+		<div class="four column">
+			<div class="price-icon">
+				<img src="images/pricing/price_3.png" alt=""/>
+			</div>
+			<div class="price-desc">
+				<h3>Modeling Training</h3>
+
+				<p>Maecenas pharetra rhoncus enim quis faucibus. Morbi nisi arcu, rutrum sit amet ornare sed, pharetra
+					non erat. Nunc eget nisl tellus.</p>
+
+				<p class="price_1">$450 month / <span class="price_2">$2500 year</span></p>
+			</div>
+		</div>
+
+	</div>
+
+</section>
+<!--End Pricing -->
+
+
+<!-- Team -->
+<section id="team">
+	<div class="row">
+		<div class="twelve columns">
+			<h1>Our team</h1>
+		</div>
+	</div>
+
+	<div class="row">
+		<!--trener1-->
+		<div class="three columns">
+			<img src="images/team/trener_1.jpg" alt="" class="round"/>
+			<h4>Adam Backer</h4>
+
+			<p>Lorem ipsum dolor sit amet consect adipisscin elit proin vel lectus ut eta esami vera dolor sit amet
+				consect</p>
+		</div>
+
+		<!--trener2-->
+		<div class="three columns">
+			<img src="images/team/trener_2.jpg" alt="" class="round"/>
+			<h4>Lana Jackson</h4>
+
+			<p>Lorem ipsum dolor sit amet consect adipisscin elit proin vel lectus ut eta esami vera dolor sit amet
+				consect</p>
+		</div>
+
+		<!--trener3-->
+		<div class="three columns">
+			<img src="images/team/trener_3.jpg" alt="" class="round"/>
+			<h4>Sara Peterson</h4>
+
+			<p>Lorem ipsum dolor sit amet consect adipisscin elit proin vel lectus ut eta esami vera dolor sit amet
+				consect</p>
+		</div>
+
+		<!--trener4-->
+		<div class="three columns">
+			<img src="images/team/trener_4.jpg" alt="" class="round"/>
+			<h4>Molly Drake</h4>
+
+			<p>Lorem ipsum dolor sit amet consect adipisscin elit proin vel lectus ut eta esami vera dolor sit amet
+				consect</p>
+		</div>
+	</div>
+</section>
+<!-- End team -->
+
+<!-- About -->
+<section id="about">
+	<div class="row">
+		<div class="twelve columns">
+			<div class="outline"><h1>About agency</h1></div>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="ten columns centered">
+			<p>In hac habitasse platea dictumst. Nam dapibus, odio vitae scelerisque fringilla, lacus est imperdiet
+				justo, nec tempor turpis est dignissim leo. Nunc ac tortor dui, eget posuere ante. Proin accumsan dui
+				nec nisi pulvinar pellentesque sagittis quam fringilla. Nunc venenatis volutpat nibh nec feugiat. Etiam
+				porttitor adipiscing lorem, quis laoreet sem vestibulum eu.</p>
+
+			<p>Suspendisse dignissim convallis neque, eu laoreet enim interdum ut. Lorem ipsum dolor sit amet,
+				consectetur adipiscing elit. Etiam vehicula lorem sed sem venenatis lacinia. Nunc eget sapien libero,
+				vel adipiscing est. Aliquam nisl justo, tempor posuere vestibulum ut, iaculis sit amet erat. In id
+				sapien ut lacus consequat fringilla quis in nisl.</p>
+		</div>
+	</div>
+	<!--TWITTER-->
+	<div class="three columns centered">
+		<div id="twitter">
+		</div>
+	</div>
+</section>
+<!--End About-->
+
+
+<!--Slider_2-->
+<div class="container demo-1">
+	<div class="main">
+		<!-- Elastislide Carousel -->
+		<ul id="carousel" class="elastislide-list" data-clearing>
+			<li><a href="images/slider2/big/1big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/1.jpg"
+																					alt="image01"/></a></li>
+			<li><a href="images/slider2/big/2big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/2.jpg"
+																					alt="image02"/></a></li>
+			<li><a href="images/slider2/big/3big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/3.jpg"
+																					alt="image03"/></a></li>
+			<li><a href="images/slider2/big/4big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/4.jpg"
+																					alt="image04"/></a></li>
+			<li><a href="images/slider2/big/5big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/5.jpg"
+																					alt="image05"/></a></li>
+			<li><a href="images/slider2/big/6big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/6.jpg"
+																					alt="image06"/></a></li>
+			<li><a href="images/slider2/big/7big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/7.jpg"
+																					alt="image07"/></a></li>
+			<li><a href="images/slider2/big/8big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/8.jpg"
+																					alt="image08"/></a></li>
+			<li><a href="images/slider2/big/1big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/1.jpg"
+																					alt="image01"/></a></li>
+			<li><a href="images/slider2/big/2big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/2.jpg"
+																					alt="image02"/></a></li>
+			<li><a href="images/slider2/big/3big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/3.jpg"
+																					alt="image03"/></a></li>
+			<li><a href="images/slider2/big/4big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/4.jpg"
+																					alt="image04"/></a></li>
+			<li><a href="images/slider2/big/5big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/5.jpg"
+																					alt="image05"/></a></li>
+			<li><a href="images/slider2/big/6big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/6.jpg"
+																					alt="image06"/></a></li>
+			<li><a href="images/slider2/big/7big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/7.jpg"
+																					alt="image07"/></a></li>
+			<li><a href="images/slider2/big/8big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/8.jpg"
+																					alt="image08"/></a></li>
+
+		</ul>
+		<!-- End Elastislide Carousel -->
+	</div>
+</div>
+<!--End Slider_2-->
+
+<!--Contact-->
+<section id="contact">
+	<div class="row">
+		<div class="twelve columns">
+			<h1>Contact us</h1>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="ten columns centered">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nam consectetuer. Sed aliquam, nunc eget
+				euismod ullamcorper, lectus nunc ullamcorper orci, fermentum bibendum enim nibh eget ipsum. Donec
+				porttitor ligula eu dolor.</p>
+		</div>
+	</div>
+
+	<!-- Map-->
+	<div class="map">
+		<iframe width="100%" height="480" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+				src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=ru&amp;geocode=&amp;q=NYC,+NY,+United+States&amp;aq=0&amp;oq=ny&amp;sll=53.194046,44.952114&amp;sspn=0.082583,0.215778&amp;ie=UTF8&amp;hq=&amp;hnear=%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA&amp;t=m&amp;ll=40.721697,-74.00382&amp;spn=0.031224,0.09613&amp;z=14&amp;iwloc=A&amp;output=embed"></iframe>
+		<br/>
+		<small><a
+				href="https://maps.google.com/maps?f=q&amp;source=embed&amp;hl=ru&amp;geocode=&amp;q=NYC,+NY,+United+States&amp;aq=0&amp;oq=ny&amp;sll=53.194046,44.952114&amp;sspn=0.082583,0.215778&amp;ie=UTF8&amp;hq=&amp;hnear=%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA&amp;t=m&amp;ll=40.721697,-74.00382&amp;spn=0.031224,0.09613&amp;z=14&amp;iwloc=A"
+				style="color:#0000FF;text-align:left"></a></small>
+	</div>
+	<!--End Map-->
+
+	<div class="row">
+		<div class="two columns">
+			<h5>Reach out</h5>
+			<address>
+				T - 123.456.7890<br>
+				F - 123.789.3456<br>
+				E - info@yoursite.com
+			</address>
+		</div>
+
+		<div class="three columns">
+			<h5>Hours</h5>
+			Monday - Thursday 5:30AM - 10PM<br>
+			Monday - Thursday 5:30AM - 10PM<br>
+			Saturday - Sunday 8AM - 6PM
+		</div>
+
+		<div class="two columns">
+			<h5>Location</h5>
+			123 Any Street NE<br>
+			Happy Town, FL 98709
+		</div>
+
+		<div class="five columns end">
+			<h5>Social icons</h5>
+			<ul class="icons">
+				<li><a href="#">
+					<div class="social-icon" style="background-image: url(images/social_icons/icon_1.png)"></div>
+				</a></li>
+				<li><a href="#">
+					<div class="social-icon" style="background-image: url(images/social_icons/icon_2.png)"></div>
+				</a></li>
+				<li><a href="#">
+					<div class="social-icon" style="background-image: url(images/social_icons/icon_3.png)"></div>
+				</a></li>
+				<li><a href="#">
+					<div class="social-icon" style="background-image: url(images/social_icons/icon_4.png)"></div>
+				</a></li>
+				<li><a href="#">
+					<div class="social-icon" style="background-image: url(images/social_icons/icon_5.png)"></div>
+				</a></li>
+				<li><a href="#">
+					<div class="social-icon" style="background-image: url(images/social_icons/icon_6.png)"></div>
+				</a></li>
+				<li><a href="#">
+					<div class="social-icon" style="background-image: url(images/social_icons/icon_7.png)"></div>
+				</a></li>
+				<li><a href="#">
+					<div class="social-icon" style="background-image: url(images/social_icons/icon_8.png)"></div>
+				</a></li>
+			</ul>
+		</div>
+	</div>
+</section>
+<!--End Contact-->
+
+<!--Footer-->
+<section class="footer">
+	<div class="row">
+		<div class="twelve columns">
+			<p>© 2012 <a href="#">Studio 932</a><br>
+				Developed by <a href="http://themeforest.net/user/timsnow">timsnow</a></p>
+		</div>
+	</div>
+</section>
+<!--End footer-->
+
+
+<!--Drop menu js-->
+<script>
+	$("nav select").change(function () {
+		window.location = $(this).find("option:selected").val();
+	});
+</script>
+<!--End drop menu js-->
+
+<!--Slider2 js-->
+<script type="text/javascript">
+	$('#carousel').elastislide();
+</script>
+
+<!--twitter js-->
+<script src="https://api.twitter.com/1/statuses/user_timeline/twitter.json?callback=twitterCallback2&amp;count=1"></script>
+
+<script type="text/javascript">
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-36629903-1']);
+	_gaq.push(['_trackPageview']);
+
+	(function () {
+		var ga = document.createElement('script');
+		ga.type = 'text/javascript';
+		ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0];
+		s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+</body>
+	
+	
+	
+	
+	
+	
+	

@@ -1,0 +1,205 @@
+/*--------------------------------------------------------
+Responsive elements
+--------------------------------------------------------*/
+
+@media only screen and (max-width: 1023px) {
+	.callbacks_nav {
+		left: 40px;
+		top: 60%;
+	}
+
+	.callbacks_nav.next {
+		right: 40px;
+	}
+
+	.slidetext {
+		margin: 60px 0 0 60px;
+	}
+
+	.slidetext h1 {
+		font-size: 30px;
+		padding: 0px 13px 15px 16px;
+	}
+
+	.callbacks .caption {
+		padding: 15px 20px
+	}
+
+	#about .three {
+		width: 40%;
+	}
+
+	.icons li {
+		padding-right: 4px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	nav ul {
+		display: none;
+	}
+
+	nav select {
+		display: inline-block;
+		float: right;
+		margin-top: -16px;
+	}
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+	h1 {
+		font-size: 44px;
+	}
+
+	.callbacks .caption {
+		padding: 15px 40px;
+	}
+
+	#slider {
+		padding: 40px 0 0 0;
+	}
+
+	#contact {
+		padding: 60px 0 40px 0;
+	}
+
+	#contact .twelve {
+		margin-bottom: 20px;
+	}
+
+	#contact .two, #contact .three, #contact .five {
+		font-size: 11px;
+	}
+
+	#contact .map {
+		margin: 40px 0 20px 0;
+	}
+
+	#pricing {
+		padding: 70px 0 0 0;
+	}
+
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+	h1 {
+		font-size: 32px;
+	}
+
+	.slidetext {
+		margin: 50px 0 0 20px;
+		width: 50%;
+	}
+
+	.slidetext h1 {
+		font-size: 18px;
+		text-align: left;
+		padding: 0px 13px 15px 80px;
+		background: none !important;
+	}
+
+	.callbacks .caption {
+		display: none;
+	}
+
+	#slider {
+		padding: 20px 0 0 0;
+	}
+
+	#trainers {
+		padding: 70px 0;
+	}
+
+	#about .twelve {
+		margin-bottom: 10px;
+	}
+
+	.elastislide-horizontal nav span {
+		top: 30%;
+		margin-top: -11px;
+	}
+
+	.elastislide-wrapper nav span {
+		margin: 0 20px;
+	}
+
+	#contact {
+		padding: 80px 0 10px 0;
+	}
+
+	#contact .twelve {
+		margin-bottom: 10px;
+	}
+
+	#contact .map {
+		margin: 30px 0 10px 0;
+	}
+
+}
+
+@media only screen and (max-width: 479px) {
+	.slidetext {
+		margin: 25px 0 0 10px;
+	}
+
+	.slidetext h1 {
+		font-size: 16px;
+		text-align: left;
+		background-image: none !important;
+	}
+
+	.callbacks .caption {
+		display: none;
+	}
+
+	h1 {
+		font-size: 32px;
+	}
+
+	.callbacks_nav {
+		left: 36%;
+		top: 150%;
+	}
+
+	.callbacks_nav.next {
+		right: 36%;
+	}
+
+	#slider {
+		padding: 20px 0 0 0;
+	}
+
+	#trainers {
+		padding: 70px 0;
+	}
+
+	#about .twelve {
+		margin-bottom: 10px;
+	}
+
+	.elastislide-horizontal nav span {
+		top: 20%;
+		margin-top: -11px;
+	}
+
+	.elastislide-wrapper nav span {
+		margin: 0 20px;
+	}
+
+	#contact {
+		padding: 80px 0 10px 0;
+	}
+
+	#contact .twelve {
+		margin-bottom: 10px;
+	}
+
+	#contact .map {
+		margin: 30px 0 10px 0;
+	}
+
+	.icons li {
+		padding-right: 0;
+	}
+
+}		
