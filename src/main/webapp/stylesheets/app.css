@@ -1,0 +1,296 @@
+/* Artfully masterminded by ZURB  */
+
+/* -------------------------------------------------- 
+   Table of Contents
+-----------------------------------------------------
+:: Shared Styles
+:: Page Name 1
+:: Page Name 2
+*/
+
+/* -----------------------------------------
+   Shared Styles
+----------------------------------------- */
+
+/* -----------------------------------------
+   Page Name 1
+----------------------------------------- */
+
+/* -----------------------------------------
+   Page Name 2
+----------------------------------------- */
+
+/*Header*/
+header {
+	height: 60px !important;
+	padding-top: 20px;
+	z-index: 2000;
+	background: white;
+	width: 100%;
+}
+
+header .row .five {
+	margin-top: 3px;
+}
+
+nav select {
+	display: none;
+	wodth: 100px;
+}
+
+nav li {
+	display: inline-block;
+	margin-left: 20px;
+}
+
+nav li a {
+	font-weight: bold;
+	font-size: 14px;
+	text-transform: uppercase;
+	color: #181516;
+}
+
+nav li a:hover {
+	color: #708ca2;
+	transition: color 0.5s;
+	-moz-transition: color 0.5s;
+	-webkit-transition: color 0.5s;
+	-o-transition: color 0.5s;
+}
+
+/*Slider*/
+
+#slider {
+	height: auto;
+	width: 100%;
+	padding: 60px 0 20px 0;
+	background: #0e0e10;
+
+}
+
+/*Pricing*/
+
+#pricing {
+	height: auto;
+	width: 100%;
+	padding: 60px 0 20px 0;
+	background: #0e0e10;
+	color: #d0d5d7;
+}
+
+#pricing .column {
+	margin-top: 20px;
+
+}
+
+.price-icon {
+	width: 60px;
+	text-align: right;
+	float: left;
+	overflow: hidden;
+	margin-top: 0px;
+
+}
+
+.price-desc {
+	margin: 0 0 0 80px;
+}
+
+#pricing h3 {
+	color: #708ca2;
+	margin-top: -4px;
+}
+
+#pricing p {
+	padding-right: 10px;
+	font-size: 13px;
+	margin-bottom: 0.8em;
+}
+
+.price_1 {
+	font-size: 18px !important;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #fff;
+	font-family: 'Lato', 'Helvetica Neue',, Helvetica, Arial, sans-serif;
+}
+
+.price_2 {
+	font-size: 12px;
+	text-transform: uppercase;
+	font-family: 'Lato', 'Helvetica Neue',, Helvetica, Arial, sans-serif;
+}
+
+/*team*/
+
+#team {
+	height: auto;
+	width: 100%;
+	padding: 70px 0;
+	background: #0e0e10;
+	color: #d0d5d7;
+	text-align: center;
+}
+
+#team .twelve {
+	background: url(../images/line_1.jpg) center 45% repeat-x;
+}
+
+.round {
+	border-radius: 200px;
+}
+
+#team h1 {
+	color: #fff;
+	background: #0e0e10;
+	position: relative;
+	display: inline-block;
+	padding: 0 20px;
+}
+
+#team img {
+	margin-top: 40px;
+}
+
+#team h4 {
+	color: #d0d5d7;
+	margin-top: 30px;
+	padding: 0 10px;
+}
+
+#team p {
+	padding: 0 10px;
+	font-size: 13px;
+}
+
+/*About*/
+
+#about {
+	height: auto;
+	width: 100%;
+	padding: 70px 0 60px 0;
+	background: #1c1c20;
+	color: #d0d5d7;
+	text-align: center;
+}
+
+#about .twelve {
+	background: url(../images/line_1.jpg) center 45% repeat-x;
+	margin-bottom: 40px;
+}
+
+#about h1 {
+	color: #fff;
+	background: #1c1c20;
+	position: relative;
+	display: inline-block;
+	padding: 0 20px;
+}
+
+.twitter-author {
+	background: url(../images/line_1.jpg) center 65% repeat-x;
+	margin: 0 !important;
+}
+
+.twitter-author img {
+	background: #1c1c20;
+	position: relative;
+	display: inline-block;
+	padding: 0 20px;
+	margin: 40px 0 10px 0;
+}
+
+#about p.tweet {
+	color: #fff;
+	font-size: 14px;
+	margin: 14px 0 14px 0 !important;
+}
+
+#about p.twitter-date {
+	font-size: 11px;
+	margin: 0 !important;
+}
+
+/*Contact*/
+
+#contact {
+	height: auto;
+	width: 100%;
+	padding: 100px 0 60px 0;
+	text-align: center;
+}
+
+#contact .twelve {
+	background: url(../images/line_2.jpg) center 45% repeat-x;
+	margin-bottom: 40px;
+}
+
+#contact h1 {
+	background: #fff;
+	position: relative;
+	display: inline-block;
+	padding: 0 20px;
+}
+
+#contact .map {
+	margin: 60px 0 40px 0;
+}
+
+#contact .two, #contact .three, #contact .five {
+	text-align: left;
+	font-size: 13px;
+	line-height: 1.8;
+	margin-top: 20px;
+}
+
+address {
+	font-style: normal;
+}
+
+.icons li {
+	text-align: left;
+	display: inline-block;
+	padding-right: 6px;
+	height: 30px;
+	overflow: hidden;
+}
+
+.social-icon {
+	width: 30px;
+	height: 30px;
+	background: bottom;
+	transition: all .1s;
+	-webkit-transition: all .1s;
+	-moz-transition: all .1s;
+	-o-transition: all .1s;
+}
+
+.social-icon:hover {
+	background: top;
+	transition: all .1s;
+	-webkit-transition: all .1s;
+	-moz-transition: all .1s;
+	-o-transition: all .1s;
+}
+
+/*Footer*/
+
+.footer {
+	height: auto;
+	width: 100%;
+	padding: 0px 0;
+	background: #0e0e10;
+	color: #d0d5d7;
+}
+
+.footer p {
+	margin: 20px 0;
+	font-size: 12px;
+}
+
+
+
+
+
+
+
