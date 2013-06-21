@@ -1,25 +1,3 @@
-/* Artfully masterminded by ZURB  */
-
-/* -------------------------------------------------- 
-   Table of Contents
------------------------------------------------------
-:: Shared Styles
-:: Page Name 1
-:: Page Name 2
-*/
-
-/* -----------------------------------------
-   Shared Styles
------------------------------------------ */
-
-/* -----------------------------------------
-   Page Name 1
------------------------------------------ */
-
-/* -----------------------------------------
-   Page Name 2
------------------------------------------ */
-
 /*Header*/
 header {
 	height: 60px !important;
@@ -121,7 +99,7 @@ nav li a:hover {
 	font-family: 'Lato', 'Helvetica Neue',, Helvetica, Arial, sans-serif;
 }
 
-/*team*/
+/*Team*/
 
 #team {
 	height: auto;
@@ -187,32 +165,7 @@ nav li a:hover {
 	padding: 0 20px;
 }
 
-.twitter-author {
-	background: url(../images/line_1.jpg) center 65% repeat-x;
-	margin: 0 !important;
-}
-
-.twitter-author img {
-	background: #1c1c20;
-	position: relative;
-	display: inline-block;
-	padding: 0 20px;
-	margin: 40px 0 10px 0;
-}
-
-#about p.tweet {
-	color: #fff;
-	font-size: 14px;
-	margin: 14px 0 14px 0 !important;
-}
-
-#about p.twitter-date {
-	font-size: 11px;
-	margin: 0 !important;
-}
-
 /*Contact*/
-
 #contact {
 	height: auto;
 	width: 100%;
@@ -274,7 +227,6 @@ address {
 }
 
 /*Footer*/
-
 .footer {
 	height: auto;
 	width: 100%;
