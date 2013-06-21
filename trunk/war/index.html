@@ -1,6 +1,4 @@
 <!DOCTYPE html>
-
-<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
 <!--[if lt IE 7]>
 <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
 <!--[if IE 7]>
@@ -10,39 +8,34 @@
 <!--[if gt IE 8]><!-->
 <html class="no-js" lang="en"> <!--<![endif]-->
 <!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=UTF-8"/>
-<!-- /Added by HTTrack -->
 <head>
 	<meta charset="utf-8"/>
 
 	<!-- Set the viewport width to device width for mobile -->
 	<meta name="viewport" content="width=device-width"/>
 
-	<title>Studio 932</title>
+	<title>ВИК "Дикая Охота"</title>
 
-	<!-- Included CSS Files (Uncompressed) -->
-	<!--
-	<link rel="stylesheet" href="stylesheets/foundation.css">
-	-->
+	<!--Add favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
 
-
+	<!--Add fonts-->
 	<link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
 
+	<!--Site css-->
+	<link rel="stylesheet" href="stylesheets/app.css">
 	<!-- Included CSS Files (Compressed) -->
 	<link rel="stylesheet" href="stylesheets/foundation.css">
-	<link rel="stylesheet" href="stylesheets/app.css">
-
-	<link rel="stylesheet" type="text/css" href="stylesheets/responsiveslides.css"/>
-	<!--Slider1 css-->
-	<link rel="stylesheet" type="text/css" href="stylesheets/elastislide.css"/>
-	<!--Slider2 css-->
-	<link rel="stylesheet" href="stylesheets/lightbox.css"/>
+	<!--Slider css-->
+	<link rel="stylesheet" href="stylesheets/responsiveslides.css"/>
 	<!--Lightbox css-->
-	<link rel="stylesheet" href="stylesheets/media.css">
+	<link rel="stylesheet" href="stylesheets/lightbox.css"/>
 	<!-- dd -->
+	<link rel="stylesheet" href="stylesheets/media.css">
 
-	<!-- Javascripts-->
-	<script type="text/javascript" src="../../ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<!-- Java scripts-->
+	<script type="text/javascript" src="javascripts/jquery-1.10.1.min.js"></script>
 
 	<!--Drop navigation-->
 	<script>
@@ -60,19 +53,18 @@
 			}).appendTo("nav select");
 		});
 	</script>
-	<!--End drop navigation-->
 
-	<!--Slider1 js-->
+	<!--Slider js-->
 	<script src="javascripts/responsiveslides.min.js"></script>
 	<script>
 		$(function () {
 			$(".rslides").responsiveSlides({
-				auto: false,             // Boolean: Animate automatically, true or false
-				speed: 1000,            // Integer: Speed of the transition, in milliseconds
+				auto: true,             // Boolean: Animate automatically, true or false
+				speed: 2000,            // Integer: Speed of the transition, in milliseconds
 				timeout: 4000,          // Integer: Time between slide transitions, in milliseconds
 				nav: true,             // Boolean: Show navigation, true or false
-				prevText: "Previous",   // String: Text for the "previous" button
-				nextText: "Next",       // String: Text for the "next" button
+				prevText: "Следущая",   // String: Text for the "previous" button
+				nextText: "Предыдущая",       // String: Text for the "next" button
 				maxwidth: "1120px",           // Integer: Max-width of the slideshow, in pixels
 				controls: "",           // Selector: Where controls should be appended to, default is after the 'ul'
 				namespace: "callbacks",   // String: change the default namespace used
@@ -85,37 +77,24 @@
 			});
 		});
 	</script>
-	<!--End slider1 js-->
-
-	<!--Slider2 js-->
-	<script src="javascripts/modernizr.custom.17475.js"></script>
-	<script type="text/javascript" src="javascripts/jquerypp.custom.js"></script>
-	<script type="text/javascript" src="javascripts/jquery.elastislide.js"></script>
-	<!--End slider2 js-->
 
 	<!--Navigation js-->
-	<script src="jquery.html"></script>
 	<script src="javascripts/jquery.sticky.js"></script>
 	<script>
 		$(document).ready(function () {
 			$("header").sticky({topSpacing: 0});
 		});
 	</script>
-	<!--End navigation js-->
 
-	<!--smooth scroll js-->
+	<!--Smooth scroll js-->
 	<script src="javascripts/scrolling.js"></script>
 
-	<!--twitter js-->
-	<script src="javascripts/lasttweet.js"></script>
-
-	<!--lightbox js-->
+	<!--Lightbox js-->
 	<script src="javascripts/lightbox.js"></script>
-
 </head>
+
 <body>
-<div id="home">
-</div>
+<div id="home"></div>
 <!-- Header and Nav -->
 <header id="header">
 	<div class="row">
@@ -133,6 +112,7 @@
 					<li><a href="#contact" class="scroll">Contact</a></li>
 				</ul>
 
+				<!--suppress HtmlFormInputWithoutLabel -->
 				<select>
 					<option value="" class="scroll">Navigation</option>
 					<option value="#home" class="scroll">Home</option>
@@ -319,58 +299,8 @@
 				sapien ut lacus consequat fringilla quis in nisl.</p>
 		</div>
 	</div>
-	<!--TWITTER-->
-	<div class="three columns centered">
-		<div id="twitter">
-		</div>
-	</div>
 </section>
 <!--End About-->
-
-
-<!--Slider_2-->
-<div class="container demo-1">
-	<div class="main">
-		<!-- Elastislide Carousel -->
-		<ul id="carousel" class="elastislide-list" data-clearing>
-			<li><a href="images/slider2/big/1big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/1.jpg"
-																					alt="image01"/></a></li>
-			<li><a href="images/slider2/big/2big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/2.jpg"
-																					alt="image02"/></a></li>
-			<li><a href="images/slider2/big/3big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/3.jpg"
-																					alt="image03"/></a></li>
-			<li><a href="images/slider2/big/4big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/4.jpg"
-																					alt="image04"/></a></li>
-			<li><a href="images/slider2/big/5big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/5.jpg"
-																					alt="image05"/></a></li>
-			<li><a href="images/slider2/big/6big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/6.jpg"
-																					alt="image06"/></a></li>
-			<li><a href="images/slider2/big/7big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/7.jpg"
-																					alt="image07"/></a></li>
-			<li><a href="images/slider2/big/8big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/8.jpg"
-																					alt="image08"/></a></li>
-			<li><a href="images/slider2/big/1big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/1.jpg"
-																					alt="image01"/></a></li>
-			<li><a href="images/slider2/big/2big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/2.jpg"
-																					alt="image02"/></a></li>
-			<li><a href="images/slider2/big/3big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/3.jpg"
-																					alt="image03"/></a></li>
-			<li><a href="images/slider2/big/4big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/4.jpg"
-																					alt="image04"/></a></li>
-			<li><a href="images/slider2/big/5big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/5.jpg"
-																					alt="image05"/></a></li>
-			<li><a href="images/slider2/big/6big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/6.jpg"
-																					alt="image06"/></a></li>
-			<li><a href="images/slider2/big/7big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/7.jpg"
-																					alt="image07"/></a></li>
-			<li><a href="images/slider2/big/8big.jpg" rel="lightbox[roadtrip]"><img src="images/slider2/small/8.jpg"
-																					alt="image08"/></a></li>
-
-		</ul>
-		<!-- End Elastislide Carousel -->
-	</div>
-</div>
-<!--End Slider_2-->
 
 <!--Contact-->
 <section id="contact">
@@ -459,8 +389,7 @@
 <section class="footer">
 	<div class="row">
 		<div class="twelve columns">
-			<p>© 2012 <a href="#">Studio 932</a><br>
-				Developed by <a href="http://themeforest.net/user/timsnow">timsnow</a></p>
+			<p>© 2013 <a href="#">Wildhunt</a><br>Developed by <a href="http://www.wildhunt.by">www.wildhunt.by</a></p>
 		</div>
 	</div>
 </section>
@@ -474,29 +403,6 @@
 	});
 </script>
 <!--End drop menu js-->
-
-<!--Slider2 js-->
-<script type="text/javascript">
-	$('#carousel').elastislide();
-</script>
-
-<!--twitter js-->
-<script src="https://api.twitter.com/1/statuses/user_timeline/twitter.json?callback=twitterCallback2&amp;count=1"></script>
-
-<script type="text/javascript">
-	var _gaq = _gaq || [];
-	_gaq.push(['_setAccount', 'UA-36629903-1']);
-	_gaq.push(['_trackPageview']);
-
-	(function () {
-		var ga = document.createElement('script');
-		ga.type = 'text/javascript';
-		ga.async = true;
-		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		var s = document.getElementsByTagName('script')[0];
-		s.parentNode.insertBefore(ga, s);
-	})();
-</script>
 
 </body>
 	
