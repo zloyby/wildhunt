@@ -39,7 +39,7 @@
 
 h1.dark {
 	color: #161314 !important;
-	background: url("../images/slider1/line_black.jpg") no-repeat bottom !important;
+	background: url("../images/slider/line_black.jpg") no-repeat bottom !important;
 }
 
 .slidetext {
@@ -63,7 +63,7 @@ h1.dark {
 	margin: 0;
 	max-width: 600px;
 	text-transform: uppercase;
-	background: url("../images/slider1/line_white.jpg") no-repeat bottom;
+	background: url("../images/slider/line_white.jpg") no-repeat bottom;
 }
 
 /* Callback example */
@@ -129,7 +129,7 @@ h1.dark {
 	text-decoration: none;
 	width: 34px;
 	height: 34px;
-	background: #3c3b3f url(../images/slider1/arrows_slider.png) no-repeat -4px -3px;
+	background: #3c3b3f url(../images/slider/arrows_slider.png) no-repeat -4px -3px;
 	border-radius: 50%;
 	-webkit-border-radius: 50%;
 	-moz-border-radius: 50%;
