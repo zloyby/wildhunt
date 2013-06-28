@@ -35,27 +35,10 @@
 	<link rel="stylesheet" href="stylesheets/media.css">
 
 	<!-- Java scripts-->
-	<script type="text/javascript" src="javascripts/jquery-1.10.1.min.js"></script>
-
-	<!--Drop navigation-->
-	<script>
-		$("<select />").appendTo("nav");
-		$("<option />", {
-			"selected": "selected",
-			"value": "",
-			"text": "Go to..."
-		}).appendTo("nav select");
-		$("nav a").each(function () {
-			var el = $(this);
-			$("<option />", {
-				"value": el.attr("href"),
-				"text": el.text()
-			}).appendTo("nav select");
-		});
-	</script>
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
 
 	<!--Slider js-->
-	<script src="javascripts/responsiveslides.min.js"></script>
+	<script src="js/responsiveslides.min.js"></script>
 	<script>
 		$(function () {
 			$(".rslides").responsiveSlides({
@@ -79,7 +62,7 @@
 	</script>
 
 	<!--Navigation js-->
-	<script src="javascripts/jquery.sticky.js"></script>
+	<script src="js/jquery.sticky.js"></script>
 	<script>
 		$(document).ready(function () {
 			$("header").sticky({topSpacing: 0});
@@ -87,10 +70,10 @@
 	</script>
 
 	<!--Smooth scroll js-->
-	<script src="javascripts/scrolling.js"></script>
+	<script src="js/scrolling.js"></script>
 
 	<!--Lightbox js-->
-	<script src="javascripts/lightbox.js"></script>
+	<script src="js/lightbox.js"></script>
 </head>
 
 <body>
@@ -327,54 +310,54 @@
 	<!--End Map-->
 
 	<div class="row">
-		<div class="two columns">
-			<h5>Reach out</h5>
+		<div class="four columns">
+			<h5>Контакты</h5>
 			<address>
-				T - 123.456.7890<br>
-				F - 123.789.3456<br>
-				E - info@yoursite.com
+				Руководитель: Шибеко Сергей (сэр Роланд Мак'Гир)<br/>
+				Телефон: (8029)2757201<br/>
+				Почта: <a href="mailto:www.wildhunt.by@gmail.com?Subject=Привет%20">www.wildhunt.by@gmail.com</a><br/>
+				Сайт: <a href="http://www.wildhunt.by">www.wildhunt.by</a><br/>
 			</address>
 		</div>
 
-		<div class="three columns">
-			<h5>Hours</h5>
-			Monday - Thursday 5:30AM - 10PM<br>
-			Monday - Thursday 5:30AM - 10PM<br>
-			Saturday - Sunday 8AM - 6PM
+		<div class="two columns">
+			<h5>Клуб работает</h5>
+			понедельник 15.00-22.00<br/>
+			вторник 18.00-22.00<br/>
+			среда 18.00-22.00<br/>
+			четверг 18.00-22.00<br/>
 		</div>
 
 		<div class="two columns">
-			<h5>Location</h5>
-			123 Any Street NE<br>
-			Happy Town, FL 98709
+			<h5>Наш адрес</h5>
+			РБ, г. Минск,<br>
+			Партизанский проспект,<br>
+			д.146 (ДЮЦ "Золак")
 		</div>
 
-		<div class="five columns end">
-			<h5>Social icons</h5>
+		<div class="four columns end">
+			<h5>Полезные ссылки</h5>
 			<ul class="icons">
 				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_1.png)"></div>
+					<div class="social-icon" style="background-image: url(images/social_icons/vk.png)"></div>
 				</a></li>
 				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_2.png)"></div>
+					<div class="social-icon" style="background-image: url(images/social_icons/facebook.png)"></div>
 				</a></li>
 				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_3.png)"></div>
+					<div class="social-icon" style="background-image: url(images/social_icons/flickr.png)"></div>
 				</a></li>
 				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_4.png)"></div>
+					<div class="social-icon" style="background-image: url(images/social_icons/google-plus.png)"></div>
 				</a></li>
 				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_5.png)"></div>
+					<div class="social-icon" style="background-image: url(images/social_icons/gmail.png)"></div>
 				</a></li>
 				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_6.png)"></div>
+					<div class="social-icon" style="background-image: url(images/social_icons/twitter.png)"></div>
 				</a></li>
 				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_7.png)"></div>
-				</a></li>
-				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_8.png)"></div>
+					<div class="social-icon" style="background-image: url(images/social_icons/skype.png)"></div>
 				</a></li>
 			</ul>
 		</div>
@@ -386,20 +369,12 @@
 <section class="footer">
 	<div class="row">
 		<div class="twelve columns">
-			<p>© 2013 <a href="#">Wildhunt</a><br>Developed by <a href="http://www.wildhunt.by">www.wildhunt.by</a></p>
+			<p>© 2013 <a href="http://www.wildhunt.by">Wildhunt</a></p>
 		</div>
 	</div>
 </section>
 <!--End footer-->
 
-
-<!--Drop menu js-->
-<script>
-	$("nav select").change(function () {
-		window.location = $(this).find("option:selected").val();
-	});
-</script>
-<!--End drop menu js-->
 
 </body>
 	
