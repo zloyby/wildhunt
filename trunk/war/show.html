@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<!-- Added by HTTrack -->
+<head>
+	<meta charset="utf-8"/>
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width"/>
+
+	<title>ВИК "Дикая Охота"</title>
+
+	<!--Add favicon-->
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+	<!--Add fonts-->
+	<link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
+
+	<!--Site css-->
+	<link rel="stylesheet" href="stylesheets/app.css">
+	<!--Slider css-->
+	<link rel="stylesheet" href="stylesheets/responsiveslides.css"/>
+	<!--Lightbox css-->
+	<link rel="stylesheet" href="stylesheets/lightbox.css"/>
+	<!--Flow design css-->
+	<link rel="stylesheet" href="stylesheets/foundation.css">
+	<link rel="stylesheet" href="stylesheets/media.css">
+
+	<!-- Java scripts-->
+	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+
+	<!--Slider js-->
+	<script src="js/responsiveslides.min.js"></script>
+	<script>
+		$(function () {
+			$(".rslides").responsiveSlides({
+				auto: true,             // Boolean: Animate automatically, true or false
+				speed: 1000,            // Integer: Speed of the transition, in milliseconds
+				timeout: 5000,          // Integer: Time between slide transitions, in milliseconds
+				nav: true,             // Boolean: Show navigation, true or false
+				prevText: "Следущая",   // String: Text for the "previous" button
+				nextText: "Предыдущая",       // String: Text for the "next" button
+				maxwidth: "1120px",           // Integer: Max-width of the slideshow, in pixels
+				controls: "",           // Selector: Where controls should be appended to, default is after the 'ul'
+				namespace: "callbacks",   // String: change the default namespace used
+				before: function () {
+					$('.events').append("<li>before event fired.</li>");
+				},   // Function: Before callback
+				after: function () {
+					$('.events').append("<li>after event fired.</li>");
+				}     // Function: After callback
+			});
+		});
+	</script>
+
+	<!--Navigation js-->
+	<script src="js/jquery.sticky.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("header").sticky({topSpacing: 0});
+		});
+	</script>
+
+	<!--Smooth scroll js-->
+	<script src="js/scrolling.js"></script>
+
+	<!--Lightbox js-->
+	<script src="js/lightbox.js"></script>
+</head>
+
+<body>
+<!-- Header and Nav -->
+<header id="header">
+	<div class="row">
+		<div class="five columns">
+			<img src="images/logo.png" alt=""/>
+		</div>
+		<div class="seven columns">
+
+			<nav>
+				<ul class="right">
+					<li><a href="index.html#pricing">Фестивали</a></li>
+					<li><a href="index.html#team">Участники</a></li>
+					<li><a href="index.html#about">История</a></li>
+					<li><a href="index.html#contact">Контакты</a></li>
+					<li class="active"><a href="#pricing" class="scroll">Выступления</a></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+<!-- End Header and Nav -->
+
+<!-- Pricing -->
+<section id="pricing">
+
+	<div class="row">
+		<div class="twelve columns">
+			<div class="outline"><h1>Pricing</h1></div>
+		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="four column">
+			<div class="price-icon">
+				<img src="images/pricing/price_1.png" alt=""/>
+			</div>
+			<div class="price-desc">
+				<h3>Acting Training</h3>
+
+				<p>Maecenas pharetra rhoncus enim quis faucibus. Morbi nisi arcu, rutrum sit amet ornare sed, pharetra
+					non erat. Nunc eget nisl tellus.</p>
+
+				<p class="price_1">$200 month / <span class="price_2">$1800 year</span></p>
+			</div>
+		</div>
+
+		<div class="four column">
+			<div class="price-icon">
+				<img src="images/pricing/price_2.png" alt=""/>
+			</div>
+			<div class="price-desc">
+				<h3>Fitness and pilates</h3>
+
+				<p>Maecenas pharetra rhoncus enim quis faucibus. Morbi nisi arcu, rutrum sit amet ornare sed, pharetra
+					non erat. Nunc eget nisl tellus.</p>
+
+				<p class="price_1">$300 month / <span class="price_2">$2100 year</span></p>
+			</div>
+		</div>
+
+
+		<div class="four column">
+			<div class="price-icon">
+				<img src="images/pricing/price_3.png" alt=""/>
+			</div>
+			<div class="price-desc">
+				<h3>Modeling Training</h3>
+
+				<p>Maecenas pharetra rhoncus enim quis faucibus. Morbi nisi arcu, rutrum sit amet ornare sed, pharetra
+					non erat. Nunc eget nisl tellus.</p>
+
+				<p class="price_1">$450 month / <span class="price_2">$2500 year</span></p>
+			</div>
+		</div>
+
+	</div>
+
+</section>
+<!--End Pricing -->
+
+</body>
+
+
+
+
+
+
