@@ -25,10 +25,6 @@
 
 	<!--Site css-->
 	<link rel="stylesheet" href="stylesheets/app.css">
-	<!--Slider css-->
-	<link rel="stylesheet" href="stylesheets/responsiveslides.css"/>
-	<!--Lightbox css-->
-	<link rel="stylesheet" href="stylesheets/lightbox.css"/>
 	<!--Flow design css-->
 	<link rel="stylesheet" href="stylesheets/normalize.css">
 	<link rel="stylesheet" href="stylesheets/foundation.css">
@@ -36,30 +32,6 @@
 
 	<!-- Java scripts-->
 	<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
-
-	<!--Slider js-->
-	<script src="js/responsiveslides.min.js"></script>
-	<script>
-		$(function () {
-			$(".rslides").responsiveSlides({
-				auto: true,             // Boolean: Animate automatically, true or false
-				speed: 1000,            // Integer: Speed of the transition, in milliseconds
-				timeout: 5000,          // Integer: Time between slide transitions, in milliseconds
-				nav: true,             // Boolean: Show navigation, true or false
-				prevText: "Следущая",   // String: Text for the "previous" button
-				nextText: "Предыдущая",       // String: Text for the "next" button
-				maxwidth: "1120px",           // Integer: Max-width of the slideshow, in pixels
-				controls: "",           // Selector: Where controls should be appended to, default is after the 'ul'
-				namespace: "callbacks",   // String: change the default namespace used
-				before: function () {
-					$('.events').append("<li>before event fired.</li>");
-				},   // Function: Before callback
-				after: function () {
-					$('.events').append("<li>after event fired.</li>");
-				}     // Function: After callback
-			});
-		});
-	</script>
 
 	<!--Navigation js-->
 	<script src="js/jquery.sticky.js"></script>
@@ -71,9 +43,6 @@
 
 	<!--Smooth scroll js-->
 	<script src="js/scrolling.js"></script>
-
-	<!--Lightbox js-->
-	<script src="js/lightbox.js"></script>
 </head>
 
 <body>
@@ -88,7 +57,7 @@
 			<nav>
 				<ul class="right">
 					<li class="active"><a href="show.html">Шоу</a></li>
-					<li><a href="index.html#festivals">Фестивали</a></li>
+					<li><a href="index.html">Фестивали</a></li>
 					<li><a href="index.html#team">Участники</a></li>
 					<li><a href="index.html#about">История</a></li>
 					<li><a href="index.html#contact">Контакты</a></li>
@@ -99,49 +68,18 @@
 </header>
 <!-- End Header and Nav -->
 
-<!-- Slider -->
+<!-- Video -->
 <section id="slider">
 	<div class="row">
 		<div class="twelve column">
 			<div id="wrapper">
-				<div class="callbacks_container">
-					<ul class="rslides">
-						<li>
-							<img src="images/slider/1.jpg" alt=""/>
-
-							<div class="slidetext">
-								<h1> Путешествуй с нами! </h1>
-
-								<p class="caption">Мы выбираемся в самые красивые и большие замки по всей Европе,
-									отдыхаем на берегу прекрасных речек и ходим в увлекательные походы...</p>
-							</div>
-						</li>
-						<li><img src="images/slider/2.jpg" alt=""/>
-
-							<div class="slidetext">
-								<h1> Живи с нами! </h1>
-
-								<p class="caption">Ночевки в шатре при свечах, приготовленная по средневековым
-									рецептам еда, ненавязчивые мелодии и разговоры об истории у костра...</p>
-							</div>
-						</li>
-
-						<li><img src="images/slider/3.jpg" alt=""/>
-
-							<div class="slidetext">
-								<h1> Сражайся с нами! </h1>
-
-								<p class="caption">Изготовление доспехов и тренировки, локальные, отборочные турниры и
-									самые крупные чемпионаты мира по средневековым боям... </p>
-							</div>
-						</li>
-					</ul>
-				</div>
+				<iframe src="//player.vimeo.com/video/80461403?title=0&amp;byline=0&amp;portrait=0" width="1120"
+						height="473" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 			</div>
 		</div>
 	</div>
 </section>
-<!-- End slider -->
+<!-- End video -->
 
 <!-- Shows -->
 <section id="festivals">
@@ -255,29 +193,26 @@
 
 		<div class="four columns end">
 			<h5>Полезные ссылки</h5>
-			<!--<ul class="icons">
-				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_1.png)"></div>
+			<ul class="icons">
+				<li><a href="http://vk.com/wildhunting" target="_blank">
+					<div class="social-icon" style="background-image: url(images/social_icons/vk.png)"></div>
 				</a></li>
-				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_2.png)"></div>
+				<li><a href="https://www.facebook.com/groups/181050901956048/" target="_blank">
+					<div class="social-icon" style="background-image: url(images/social_icons/facebook.png)"></div>
 				</a></li>
-				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_3.png)"></div>
+				<li><a href="https://plus.google.com/u/0/photos/107313104903548848219/albums" target="_blank">
+					<div class="social-icon" style="background-image: url(images/social_icons/google-plus.png)"></div>
 				</a></li>
-				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_4.png)"></div>
+				<li><a href="http://www.flickr.com/groups/wildhunt/" target="_blank">
+					<div class="social-icon" style="background-image: url(images/social_icons/flickr.png)"></div>
 				</a></li>
-				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_5.png)"></div>
+				<li><a href="https://vimeo.com/groups/218844" target="_blank">
+					<div class="social-icon" style="background-image: url(images/social_icons/vimeo.png)"></div>
 				</a></li>
-				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_6.png)"></div>
+				<li><a href="mailto:www.wildhunt.by@gmail.com?Subject=Привет">
+					<div class="social-icon" style="background-image: url(images/social_icons/gmail.png)"></div>
 				</a></li>
-				<li><a href="#">
-					<div class="social-icon" style="background-image: url(images/social_icons/icon_8.png)"></div>
-				</a></li>
-			</ul>-->
+			</ul>
 		</div>
 	</div>
 </section>
