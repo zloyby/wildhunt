@@ -196,24 +196,11 @@ address {
 	text-align: left;
 	display: inline-block;
 	padding-right: 6px;
-	height: 30px;
+	height: 48px;
 	overflow: hidden;
 }
 
 .social-icon {
-	width: 30px;
-	height: 30px;
-	background: bottom;
-	transition: all .1s;
-	-webkit-transition: all .1s;
-	-moz-transition: all .1s;
-	-o-transition: all .1s;
-}
-
-.social-icon:hover {
-	background: top;
-	transition: all .1s;
-	-webkit-transition: all .1s;
-	-moz-transition: all .1s;
-	-o-transition: all .1s;
+	width: 48px;
+	height: 48px;
 }
