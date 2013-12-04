@@ -42,7 +42,7 @@ nav li a:hover {
 	height: auto;
 	width: 100%;
 	padding: 20px 0 20px 0;
-	background: #02001F;
+	background: #000000;
 }
 
 /*Festivals*/
@@ -112,7 +112,7 @@ nav li a:hover {
 	height: auto;
 	width: 100%;
 	padding: 70px 0;
-	background: #02001F;
+	background: #000000;
 	color: #d0d5d7;
 	text-align: center;
 }
@@ -123,7 +123,7 @@ nav li a:hover {
 
 #team h1 {
 	color: #fff;
-	background: #02001F;
+	background: #000000;
 	position: relative;
 	display: inline-block;
 	padding: 0 20px;
