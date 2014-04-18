@@ -30,46 +30,20 @@
 	<!--Lightbox css-->
 	<link rel="stylesheet" href="stylesheets/lightbox.css"/>
 	<!--Flow design css-->
-	<link rel="stylesheet" href="stylesheets/foundation.css">
-	<link rel="stylesheet" href="stylesheets/media.css">
+    <link rel="stylesheet" href="stylesheets/foundation.css">
+    <link rel="stylesheet" href="stylesheets/media.css">
 
-	<!-- Java scripts-->
+    <!-- Java scripts-->
     <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
 
     <!--Slider js-->
 	<script src="js/responsiveslides.min.js"></script>
-	<script>
-		$(function () {
-			$(".rslides").responsiveSlides({
-				auto: true,             // Boolean: Animate automatically, true or false
-				speed: 1000,            // Integer: Speed of the transition, in milliseconds
-				timeout: 5000,          // Integer: Time between slide transitions, in milliseconds
-				nav: true,             // Boolean: Show navigation, true or false
-				prevText: "Следущая",   // String: Text for the "previous" button
-				nextText: "Предыдущая",       // String: Text for the "next" button
-				maxwidth: "1120px",           // Integer: Max-width of the slideshow, in pixels
-				controls: "",           // Selector: Where controls should be appended to, default is after the 'ul'
-				namespace: "callbacks",   // String: change the default namespace used
-				before: function () {
-					$('.events').append("<li>before event fired.</li>");
-				},   // Function: Before callback
-				after: function () {
-					$('.events').append("<li>after event fired.</li>");
-				}     // Function: After callback
-			});
-		});
-	</script>
 
 	<!--Navigation js-->
-	<script src="js/jquery.sticky.js"></script>
-	<script>
-		$(document).ready(function () {
-			$("header").sticky({topSpacing: 0});
-		});
-	</script>
+    <script src="js/jquery.sticky.min.js"></script>
 
-	<!--Lightbox js-->
-	<script src="js/lightbox.js"></script>
+    <!--Lightbox js-->
+    <script src="js/lightbox.min.js"></script>
 </head>
 
 <body>
@@ -82,21 +56,12 @@
 		<div class="seven columns">
 			<nav>
 				<ul class="right">
-                    <li><a href="./show.html">Шоу</a></li>
-                    <li class="active"><a href="./festivals.html" class="scroll">Фестивали</a></li>
+                    <li><img src="images/new.png"><a href="./show.html">Шоу</a></li>
+                    <li><a href="./festivals.html" class="scroll">Фестивали</a></li>
                     <li><a href="./participants.html" class="scroll">Участники</a></li>
                     <li><a href="./about.html" class="scroll">История</a></li>
                     <li><a href="./index.html#contact" class="scroll">Контакты</a></li>
                 </ul>
-				<!--suppress HtmlFormInputWithoutLabel -->
-				<select class="menu">
-					<option value="">[Разделы]</option>
-                    <option value="./show.html">Шоу</option>
-                    <option value="./festivals.html">Фестивали</option>
-                    <option value="./participants.html">Участники</option>
-                    <option value="./about.html">История</option>
-                    <option value="#contact">Контакты</option>
-				</select>
 			</nav>
 		</div>
 	</div>
@@ -107,42 +72,31 @@
 <section id="slider">
 	<div class="row">
 		<div class="twelve column">
-			<div id="wrapper">
-				<div class="callbacks_container">
-					<ul class="rslides">
-						<li>
-							<img src="images/slider/1.jpg" alt=""/>
+            <div id="wrapper">
+                <div class="rslides_container">
+                    <ul class="rslides1" id="slides" style="max-width: 1120px;">
+                        <li style="display: block; float: left; position: relative; opacity: 1; z-index: 2; transition: opacity 500ms ease-in-out 0s;">
+                            <img src="images/slider/1.jpg" alt=""/>
 
-							<div class="slidetext">
-								<h1> Путешествуй с нами! </h1>
+                            <p class="caption">Мы выбираемся в самые красивые и большие замки по всей Европе,
+                                отдыхаем на берегу прекрасных речек и ходим в увлекательные походы...</p>
+                        </li>
+                        <li style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+                            <img src="images/slider/2.jpg" alt=""/>
 
-								<p class="caption">Мы выбираемся в самые красивые и большие замки по всей Европе,
-									отдыхаем на берегу прекрасных речек и ходим в увлекательные походы...</p>
-							</div>
-						</li>
-						<li><img src="images/slider/2.jpg" alt=""/>
+                            <p class="caption">Ночевки в шатре при свечах, приготовленная по средневековым
+                                рецептам еда, ненавязчивые мелодии и разговоры об истории у костра...</p>
+                        </li>
+                        <li style="float: none; position: absolute; opacity: 0; z-index: 1; display: list-item; transition: opacity 500ms ease-in-out 0s;">
+                            <img src="images/slider/3.jpg" alt=""/>
 
-							<div class="slidetext">
-								<h1> Живи с нами! </h1>
-
-								<p class="caption">Ночевки в шатре при свечах, приготовленная по средневековым
-									рецептам еда, ненавязчивые мелодии и разговоры об истории у костра...</p>
-							</div>
-						</li>
-
-						<li><img src="images/slider/3.jpg" alt=""/>
-
-							<div class="slidetext">
-								<h1> Сражайся с нами! </h1>
-
-								<p class="caption">Изготовление доспехов и тренировки, локальные, отборочные турниры и
-									самые крупные чемпионаты мира по средневековым боям... </p>
-							</div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
+                            <p class="caption">Изготовление доспехов и тренировки, локальные, отборочные турниры и
+                                самые крупные чемпионаты мира по средневековым боям... </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 	</div>
 </section>
 <!-- End slider -->
@@ -364,6 +318,21 @@
 	</div>
 </section>
 <!--End Contact-->
+
+<script>
+    $(document).ready(function () {
+        $("header").sticky({topSpacing: 0});
+        $("#slides").responsiveSlides({
+            auto: true,
+            pagination: true,
+            nav: true,
+            pause: true,
+            speed: 1000,
+            timeout: 5000,
+            fade: 500
+        });
+    });
+</script>
 
 </body>
 	

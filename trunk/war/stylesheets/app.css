@@ -11,11 +11,6 @@ header .row .five {
 	margin-top: 3px;
 }
 
-nav select {
-	display: none;
-	width: 100px;
-}
-
 nav li {
 	display: inline-block;
 	margin-left: 20px;
@@ -43,6 +38,11 @@ nav li a:hover {
 	width: 100%;
 	padding: 20px 0 20px 0;
 	background: #000000;
+}
+
+#wrapper {
+    float: left;
+    width: 100%;
 }
 
 /*Festivals*/
