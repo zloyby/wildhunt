@@ -1,3 +1,7 @@
+* {
+    font-family: sans-serif;
+}
+
 /*Header*/
 header {
 	height: 60px !important;
