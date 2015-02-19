@@ -49,9 +49,6 @@
 			<options>
 				<arg value="--num_days=5"/>
 			</options>
-			<args>
-				<arg value="logs.txt"/>
-			</args>
 		</appcfg>
 	</target>
 
