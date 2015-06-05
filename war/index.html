@@ -24,17 +24,15 @@
 	<link href='http://fonts.googleapis.com/css?family=Lato:900' rel='stylesheet' type='text/css'>
 
 	<!--Site css-->
-	<link rel="stylesheet" href="stylesheets/app.css">
+    <link rel="stylesheet" href="css/app.css">
 	<!--Slider css-->
-	<link rel="stylesheet" href="stylesheets/responsiveslides.css"/>
-	<!--Lightbox css-->
-	<link rel="stylesheet" href="stylesheets/lightbox.css"/>
+    <link rel="stylesheet" href="css/responsiveslides.css"/>
 	<!--Flow design css-->
-    <link rel="stylesheet" href="stylesheets/foundation.css">
-    <link rel="stylesheet" href="stylesheets/media.css">
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/media.css">
 
     <!-- Java scripts-->
-    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.0.min.js"></script>
 
     <!--Slider js-->
 	<script src="js/responsiveslides.min.js"></script>
@@ -42,7 +40,8 @@
 	<!--Navigation js-->
     <script src="js/jquery.sticky.min.js"></script>
 
-    <!--Lightbox js-->
+    <!--Lightbox-->
+    <link rel="stylesheet" href="css/lightbox.css"/>
     <script src="js/lightbox.min.js"></script>
 </head>
 
@@ -191,19 +190,25 @@
 			<p>Рыцарь</p>
 		</div>
 
-		<div class="three columns">
-			<img src="images/team/kazlou_eugene/face.jpg" alt="" class="round"/>
-			<h4>Евгений Козлов</h4>
+        <div class="three columns">
+            <a href="images/team/kazlou_eugene/1.jpg" rel="lightbox[kazlou_eugene]"><img
+                    src="images/team/kazlou_eugene/face.jpg" alt="" class="round"/></a>
+            <a href="images/team/kazlou_eugene/2.jpg" rel="lightbox[kazlou_eugene]" class="lightbox_hide_image"></a>
+            <a href="images/team/kazlou_eugene/3.jpg" rel="lightbox[kazlou_eugene]" class="lightbox_hide_image"></a>
+            <h4>Евгений Козлов</h4>
 
-            <p>Оруженосец</p>
+            <p>Оруженосец, канцлер</p>
         </div>
 
-		<div class="three columns">
-			<img src="images/team/bohan_leanid/face.png" alt="" class="round"/>
-			<h4>Леонид Богдан</h4>
+        <div class="three columns">
+            <a href="images/team/bohan_leanid/1.jpg" rel="lightbox[bohan_leanid]"><img
+                    src="images/team/bohan_leanid/face.png" alt="" class="round"/></a>
+            <a href="images/team/bohan_leanid/2.jpg" rel="lightbox[bohan_leanid]" class="lightbox_hide_image"></a>
+            <a href="images/team/bohan_leanid/3.jpg" rel="lightbox[bohan_leanid]" class="lightbox_hide_image"></a>
+            <h4>Леонид Богдан</h4>
 
-			<p>Воин</p>
-		</div>
+            <p>Воин</p>
+        </div>
     </div>
 
     <div class="row">
