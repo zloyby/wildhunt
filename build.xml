@@ -1,5 +1,5 @@
 <project>
-	<property name="sdk.dir" location="/Users/eugene/java/appengine-java-sdk-1.8.0"/>
+	<property name="sdk.dir" location="/Users/eugene/java/appengine-java-sdk-1.9.42"/>
 
 	<import file="${sdk.dir}/config/user/ant-macros.xml"/>
 
@@ -39,17 +39,20 @@
 	</target>
 
 	<target name="update"
-			description="Uploads the application to App Engine. Firstly use: ~/java/appengine-java-sdk-1.8.0/bin/appcfg.sh update ~/workspace/zloy/wildhunt/war/ with admin@wildhunt.by and drenuv6">
+			description="Uploads the application to App Engine. Firstly use: ~/java/appengine-java-sdk-1.9.42/bin/appcfg.sh update ~/workspace/zloy/wildhunt/war/ (in browser should login with admin@wildhunt.by and drenuv6).">
 		<appcfg action="update" war="war"/>
 	</target>
 
-	<target name="request_logs"
-			description="Downloads log data from App Engine for the application.">
+	<target name="request_logs" description="Downloads log data from App Engine for the application.">
 		<appcfg action="request_logs" war="war">
-			<options>
-				<arg value="--num_days=5"/>
-			</options>
+	  		<options>
+	    		<arg value="--num_days=5"/>
+	  		</options>
+	  		<args>
+	    		<arg value="logs.txt"/>
+	  		</args>
 		</appcfg>
 	</target>
+
 
 </project>
