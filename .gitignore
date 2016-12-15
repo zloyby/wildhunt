@@ -1,9 +1,9 @@
 .classpath
 .project
 .idea
-.build
 .classes
 .gradle
+/build/
 /out/
 /target/
 *.iml
