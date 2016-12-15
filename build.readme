@@ -1,0 +1,21 @@
+Commands of Google Cloud
+
+> gcloud init
+
+> gcloud config list
+> gcloud auth list
+> gcloud config configurations list
+
+> gcloud config configurations activate CONFIGURATION_NAMES
+> gcloud config configurations delete CONFIGURATION_NAMES
+
+Run locally:
+> gradle tasks
+> export JAVA_HOME=`/usr/libexec/java_home -v 1.7` && gradle clean && gradle appengineRun
+@ http://localhost:8000/
+@ http://localhost:8080/
+
+Deploy on production: 
+> gradle appengineDeploy
+View logs from production:
+> gcloud app logs read -s default

@@ -39,7 +39,7 @@
 	</target>
 
 	<target name="update"
-			description="Uploads the application to App Engine. Firstly use: ~/java/appengine-java-sdk-1.9.42/bin/appcfg.sh update ~/workspace/zloy/wildhunt/war/ (in browser should login with admin@wildhunt.by and drenuv6).">
+			description="Deprecated! Use gradle! Uploads the application to App Engine. Firstly use: ~/java/appengine-java-sdk-1.9.42/bin/appcfg.sh update ~/workspace/zloy/wildhunt/war/ (in browser should login with admin@wildhunt.by and drenuv6).">
 		<appcfg action="update" war="war"/>
 	</target>
 
