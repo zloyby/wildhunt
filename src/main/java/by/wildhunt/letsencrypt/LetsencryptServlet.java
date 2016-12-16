@@ -10,11 +10,10 @@ import javax.servlet.http.HttpServletResponse;
 
 @SuppressWarnings("SpellCheckingInspection")
 public class LetsencryptServlet extends HttpServlet {
-    private static final Map<String, String> challenges = new HashMap<>();
-
     static final String PREFIX = "/.well-known/acme-challenge/";
-    static final String KEY = "9gPe-ihZ_we4vQefwKoRRHyAS-pIfMJoflSvNwpTNhQ";
-    private static final String VALUE = "9gPe-ihZ_we4vQefwKoRRHyAS-pIfMJoflSvNwpTNhQ.j_gc0OsBVK1hT47GVnksPMuNA5plGOCt_fXOLDSwFJY";
+    static final String KEY = "5-kd_5Wxlh9igOM4F-Aa5phC72mF4z6p2NvHXKZxBRY";
+    private static final Map<String, String> challenges = new HashMap<>();
+    private static final String VALUE = "5-kd_5Wxlh9igOM4F-Aa5phC72mF4z6p2NvHXKZxBRY.j_gc0OsBVK1hT47GVnksPMuNA5plGOCt_fXOLDSwFJY";
 
     static {
         //noinspection SpellCheckingInspection

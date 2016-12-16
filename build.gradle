@@ -18,19 +18,6 @@ repositories {
     mavenCentral()
 }
 
-// App Engine tasks configuration
-appengine {
-    //noinspection GroovyAssignabilityCheck
-    run {      // local configuration (standard environments only)
-        port = 8080
-    }
-
-    deploy {   // deploy configuration
-        stopPreviousVersion = true  // default - stop the current version
-        promote = true              // default - & make this the current version
-    }
-}
-
 apply plugin: 'java'                              // standard Java tasks
 apply plugin: 'war'                               // standard Web Archive plugin
 apply plugin: 'com.google.cloud.tools.appengine'  // App Engine tasks
@@ -42,6 +29,19 @@ dependencies {
     // Add your dependencies here.
     testCompile 'junit:junit:4.12'
     testCompile "org.mockito:mockito-core:1.+"
+}
+
+// App Engine tasks configuration
+appengine {
+    //noinspection GroovyAssignabilityCheck
+    run {      // local configuration (standard environments only)
+        port = 8080
+    }
+
+    deploy {   // deploy configuration
+        stopPreviousVersion = true  // default - stop the current version
+        promote = true              // default - & make this the current version
+    }
 }
 
 group = 'by.wildhunt'      // Generated output GroupId
