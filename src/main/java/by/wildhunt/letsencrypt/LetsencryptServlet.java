@@ -11,12 +11,12 @@ import javax.servlet.http.HttpServletResponse;
 @SuppressWarnings("SpellCheckingInspection")
 public class LetsencryptServlet extends HttpServlet {
     static final String PREFIX = "/.well-known/acme-challenge/";
-    static final String KEY = "5-kd_5Wxlh9igOM4F-Aa5phC72mF4z6p2NvHXKZxBRY";
+    static final String KEY = "JivHOf-AoGERst3O8nnttXtJ5FY5HaX2L0Ua3yvJCOw";
+    static final String VALUE = "JivHOf-AoGERst3O8nnttXtJ5FY5HaX2L0Ua3yvJCOw.j_gc0OsBVK1hT47GVnksPMuNA5plGOCt_fXOLDSwFJY";
+
     private static final Map<String, String> challenges = new HashMap<>();
-    private static final String VALUE = "5-kd_5Wxlh9igOM4F-Aa5phC72mF4z6p2NvHXKZxBRY.j_gc0OsBVK1hT47GVnksPMuNA5plGOCt_fXOLDSwFJY";
 
     static {
-        //noinspection SpellCheckingInspection
         challenges.put(KEY, VALUE);
     }
 

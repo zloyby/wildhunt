@@ -19,7 +19,7 @@ public class LetsencryptServletTest extends Mockito {
         new LetsencryptServlet().doGet(request, response);
 
         verify(request, atLeast(1)).getRequestURI();
-        verify(servletOutputStream).print(anyString());
+        verify(servletOutputStream).print(LetsencryptServlet.VALUE);
     }
 
 }
