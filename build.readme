@@ -9,13 +9,48 @@ Commands of Google Cloud
 > gcloud config configurations activate CONFIGURATION_NAMES
 > gcloud config configurations delete CONFIGURATION_NAMES
 
-Run locally:
+------------------------------------------------------------------------------------------
+
+Run locally from CLI:
 > gradle tasks
 > export JAVA_HOME=`/usr/libexec/java_home -v 1.7` && gradle clean && gradle appengineRun
-@ http://localhost:8000/
-@ http://localhost:8080/
+@ http://localhost:8000/ - admin console
+@ http://localhost:8080/ - web site
 
 Deploy on production: 
 > gradle appengineDeploy
 View logs from production:
 > gcloud app logs read -s default
+
+------------------------------------------------------------------------------------------
+
+SSL certificate installation:
+
+git clone https://github.com/letsencrypt/letsencrypt
+cd letsencrypt
+./letsencrypt-auto -a manual certonly --debug
+
+Please enter in your domain name(s) (comma  and/or space separated) : [[[ www.wildhunt.by ]]]
+
+Make sure your web server displays the following content at http://wildhunt.by/.well-known/acme-challenge/***KEY***
+
+DO NOT PUSH ENTER NOW!
+
+So make manually this:
+- Add needed values to LetsencryptServlet.java
+- Then deploy by 'gradle appengineDeploy' and check URL in browser
+
+Congratulations! Your certificate and chain have been saved at
+/etc/letsencrypt/live/www.wildhunt.by/fullchain.pem. Your cert will
+expire on 2017-03-16. To obtain a new or tweaked version of this
+certificate in the future, simply run letsencrypt-auto again. To
+non-interactively renew *all* of your certificates, run
+"letsencrypt-auto renew"
+
+Convert pem key:
+sudo openssl rsa -inform pem -in /etc/letsencrypt/live/www.wildhunt.by/privkey.pem -outform pem > /Users/eugene/Desktop/privkey_for_google_cloud.pem
+sudo cp /etc/letsencrypt/live/www.wildhunt.by/cert.pem /Users/eugene/Desktop/
+
+Upload both cert.pem and privkey_fixed.pem at Appengine Setting page https://console.developers.google.com/appengine/settings/certificates?project=&moduleId=default
+
+Now SSL works for https://www.wildhunt.by/
