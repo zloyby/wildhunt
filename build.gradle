@@ -1,20 +1,34 @@
-buildscript {    // Configuration for building
-  repositories {
-    jcenter()    // Bintray's repository - a fast Maven Central mirror & more
-    mavenCentral()
-  }
-  dependencies {
-    classpath 'com.google.cloud.tools:appengine-gradle-plugin:+'    // latest App Engine Gradle tasks
-  }
+// Configuration for building
+buildscript {
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.google.cloud.tools:appengine-gradle-plugin:+' // latest App Engine Gradle tasks
+    }
 }
 
-repositories {   // repositories for Jar's you access in your code
-  maven {
-    url 'https://maven-central.storage.googleapis.com'             // Google's mirror of Maven Central
-    url 'https://oss.sonatype.org/content/repositories/snapshots' // SNAPSHOT Repository (if needed)
-  }
-  jcenter()
-  mavenCentral()
+// Repositories for Jar's you access in your code
+repositories {
+    maven {
+        url 'https://maven-central.storage.googleapis.com'
+    }
+    jcenter()
+    mavenCentral()
+}
+
+// App Engine tasks configuration
+appengine {
+    //noinspection GroovyAssignabilityCheck
+    run {      // local configuration (standard environments only)
+        port = 8080
+    }
+
+    deploy {   // deploy configuration
+        stopPreviousVersion = true  // default - stop the current version
+        promote = true              // default - & make this the current version
+    }
 }
 
 apply plugin: 'java'                              // standard Java tasks
@@ -22,22 +36,12 @@ apply plugin: 'war'                               // standard Web Archive plugin
 apply plugin: 'com.google.cloud.tools.appengine'  // App Engine tasks
 
 dependencies {
-  providedCompile group: 'javax.servlet', name: 'servlet-api', version:'2.5'
-  compile 'com.google.appengine:appengine:+'
+    providedCompile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
+    compile 'com.google.appengine:appengine:+'
 
-  // Add your dependencies here.
-  testCompile 'junit:junit:4.12'
-}
-
-appengine {  // App Engine tasks configuration
-  run {      // local configuration (standard environments only)
-    port = 8080                 // default
-  }
-
-  deploy {   // deploy configuration
-    stopPreviousVersion = true  // default - stop the current version
-    promote = true              // default - & make this the current version
-  }
+    // Add your dependencies here.
+    testCompile 'junit:junit:4.12'
+    testCompile "org.mockito:mockito-core:1.+"
 }
 
 group = 'by.wildhunt'      // Generated output GroupId

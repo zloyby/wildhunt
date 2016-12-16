@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <web-app xmlns="http://java.sun.com/xml/ns/javaee"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
-		 version="2.5">
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+         version="2.5">
 
-	<servlet>
-		<servlet-name>HelloGradle</servlet-name>
-		<servlet-class>hellogradle.HelloGradleServlet</servlet-class>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>HelloGradle</servlet-name>
-		<url-pattern>/hellogradle</url-pattern>
-	</servlet-mapping>
+    <servlet>
+        <servlet-name>letsencrypt</servlet-name>
+        <servlet-class>by.wildhunt.letsencrypt.LetsencryptServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>letsencrypt</servlet-name>
+        <url-pattern>/.well-known/acme-challenge/*</url-pattern>
+    </servlet-mapping>
 
-	<welcome-file-list>
+    <welcome-file-list>
         <welcome-file>index.html</welcome-file>
     </welcome-file-list>
 </web-app>
