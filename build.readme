@@ -51,6 +51,6 @@ Convert pem key:
 sudo openssl rsa -inform pem -in /etc/letsencrypt/live/www.wildhunt.by/privkey.pem -outform pem > /Users/eugene/Desktop/privkey_for_google_cloud.pem
 sudo cp /etc/letsencrypt/live/www.wildhunt.by/cert.pem /Users/eugene/Desktop/
 
-Upload both cert.pem and privkey_fixed.pem at Appengine Setting page https://console.developers.google.com/appengine/settings/certificates?project=&moduleId=default
+Upload both cert.pem and privkey_for_google_cloud.pem at Appengine Setting page https://console.developers.google.com/appengine/settings/certificates?project=&moduleId=default
 
 Now SSL works for https://www.wildhunt.by/
