@@ -39,6 +39,7 @@ DO NOT PUSH ENTER NOW!
 So make manually this:
 - Add needed values to LetsencryptServlet.java
 - Then deploy by 'gradle appengineDeploy' and check URL in browser
+- ONLY AFTER PUSH ENTER
 
 Congratulations! Your certificate and chain have been saved at
 /etc/letsencrypt/live/www.wildhunt.by/fullchain.pem. Your cert will
