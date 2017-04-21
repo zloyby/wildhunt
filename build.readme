@@ -26,6 +26,12 @@ View logs from production:
 
 SSL certificate installation:
 
+// ?! new approach ?! //
+Update, 10th March 2016: Please use letsencrypt-nosudo with the “ — file-based” option, and 2048 bit certs (not 4096 — App Engine can’t handle them).
+sudo rm -r  ~/.local/share/letsencrypt
+./letsencrypt-auto --text --authenticator manual --work-dir /tmp/work/ --config-dir /tmp/config/ --logs-dir /tmp/logs/ auth --cert-path /tmp/certs/ --chain-path /tmp/chains/ --csr ~/Desktop/domain.csr --debug
+
+// !? old but working approach !? //
 git clone https://github.com/letsencrypt/letsencrypt
 cd letsencrypt
 ./letsencrypt-auto -a manual certonly --debug

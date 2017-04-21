@@ -11,8 +11,8 @@ import javax.servlet.http.HttpServletResponse;
 @SuppressWarnings("SpellCheckingInspection")
 public class LetsencryptServlet extends HttpServlet {
     static final String PREFIX = "/.well-known/acme-challenge/";
-    static final String KEY = "JivHOf-AoGERst3O8nnttXtJ5FY5HaX2L0Ua3yvJCOw";
-    static final String VALUE = "JivHOf-AoGERst3O8nnttXtJ5FY5HaX2L0Ua3yvJCOw.j_gc0OsBVK1hT47GVnksPMuNA5plGOCt_fXOLDSwFJY";
+    static final String KEY = "E2iD4C1C-PfvVabZ1nPiXYf-1ZUBgUk8r9vEKG3_aJw";
+    static final String VALUE = "E2iD4C1C-PfvVabZ1nPiXYf-1ZUBgUk8r9vEKG3_aJw.j_gc0OsBVK1hT47GVnksPMuNA5plGOCt_fXOLDSwFJY";
 
     private static final Map<String, String> challenges = new HashMap<>();
 
