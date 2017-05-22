@@ -26,12 +26,9 @@ View logs from production:
 
 SSL certificate installation:
 
-// ?! new approach ?! //
-Update, 10th March 2016: Please use letsencrypt-nosudo with the “ — file-based” option, and 2048 bit certs (not 4096 — App Engine can’t handle them).
-sudo rm -r  ~/.local/share/letsencrypt
-./letsencrypt-auto --text --authenticator manual --work-dir /tmp/work/ --config-dir /tmp/config/ --logs-dir /tmp/logs/ auth --cert-path /tmp/certs/ --chain-path /tmp/chains/ --csr ~/Desktop/domain.csr --debug
+Test new approach: use letsencrypt-nosudo with the “ — file-based” option, and 2048 bit certs (not 4096 — App Engine can’t handle them).
 
-// !? old but working approach !? //
+Working approach:
 git clone https://github.com/letsencrypt/letsencrypt
 cd letsencrypt
 ./letsencrypt-auto -a manual certonly --debug
@@ -48,11 +45,11 @@ So make manually this:
 - ONLY AFTER PUSH ENTER
 
 Congratulations! Your certificate and chain have been saved at
-/etc/letsencrypt/live/www.wildhunt.by/fullchain.pem. Your cert will
-expire on 2017-03-16. To obtain a new or tweaked version of this
-certificate in the future, simply run letsencrypt-auto again. To
-non-interactively renew *all* of your certificates, run
-"letsencrypt-auto renew"
+   /etc/letsencrypt/live/www.wildhunt.by/fullchain.pem. Your cert will
+   expire on 2017-07-20. To obtain a new or tweaked version of this
+   certificate in the future, simply run letsencrypt-auto again. To
+   non-interactively renew *all* of your certificates, run
+   "letsencrypt-auto renew"
 
 Convert pem key:
 sudo openssl rsa -inform pem -in /etc/letsencrypt/live/www.wildhunt.by/privkey.pem -outform pem > /Users/eugene/Desktop/privkey_for_google_cloud.pem
