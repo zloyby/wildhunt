@@ -6,8 +6,8 @@ Commands of Google Cloud
 > gcloud auth list
 > gcloud config configurations list
 
-> gcloud config configurations activate CONFIGURATION_NAMES
-> gcloud config configurations delete CONFIGURATION_NAMES
+> gcloud config configurations activate CONFIGURATION_NAME
+> gcloud config configurations delete CONFIGURATION_NAME
 
 ------------------------------------------------------------------------------------------
 
@@ -31,11 +31,9 @@ Test new approach: use letsencrypt-nosudo with the “ — file-based” opt
 Working approach:
 git clone https://github.com/letsencrypt/letsencrypt
 cd letsencrypt
-./letsencrypt-auto -a manual certonly --debug
+./letsencrypt-auto -a manual certonly --debug --no-bootstrap
 
 Please enter in your domain name(s) (comma  and/or space separated) : [[[ www.wildhunt.by ]]]
-
-Make sure your web server displays the following content at http://wildhunt.by/.well-known/acme-challenge/***KEY***
 
 DO NOT PUSH ENTER NOW!
 

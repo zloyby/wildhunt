@@ -1,18 +1,17 @@
 package by.wildhunt.letsencrypt;
 
-import java.io.IOException;
-import java.util.HashMap;
-import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 
-@SuppressWarnings("SpellCheckingInspection")
 public class LetsencryptServlet extends HttpServlet {
     static final String PREFIX = "/.well-known/acme-challenge/";
-    static final String KEY = "E2iD4C1C-PfvVabZ1nPiXYf-1ZUBgUk8r9vEKG3_aJw";
-    static final String VALUE = "E2iD4C1C-PfvVabZ1nPiXYf-1ZUBgUk8r9vEKG3_aJw.j_gc0OsBVK1hT47GVnksPMuNA5plGOCt_fXOLDSwFJY";
+    static final String KEY = "ropV908z38asltSzIr_x2xbpYxecdoGDYG";
+    static final String VALUE = "ropV908z38asltSzIr_x2xbpYxecdoGDYG.j_gc0OsBVK1hT47GVnksPMuNA5plGOCt_fXOLDSwFJY";
 
     private static final Map<String, String> challenges = new HashMap<>();
 
