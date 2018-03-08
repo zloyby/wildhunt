@@ -25,33 +25,29 @@ View logs from production:
 ------------------------------------------------------------------------------------------
 
 SSL certificate installation:
+See https://medium.com/google-cloud/lets-encrypt-and-google-app-engine-in-2017-7cfe0928768e
 
-Test new approach: use letsencrypt-nosudo with the “ — file-based” option, and 2048 bit certs (not 4096 — App Engine can’t handle them).
-
-Working approach:
-git clone https://github.com/letsencrypt/letsencrypt
-cd letsencrypt
-./letsencrypt-auto -a manual certonly --debug --no-bootstrap
+> brew install certbot
+> sudo certbot certonly --manual
 
 Please enter in your domain name(s) (comma  and/or space separated) : [[[ www.wildhunt.by ]]]
 
-DO NOT PUSH ENTER NOW!
+!!! DO NOT PUSH ENTER NOW !!!
 
 So make manually this:
 - Add needed values to LetsencryptServlet.java
-- Then deploy by 'gradle appengineDeploy' and check URL in browser
+- Then deploy by 'gradle appengineDeploy'
+- Check by 'curl -v -X GET http://www.wildhunt.by/.well-known/acme-challenge/XXXXXX' or check URL in browser
 - ONLY AFTER PUSH ENTER
 
-Congratulations! Your certificate and chain have been saved at
-   /etc/letsencrypt/live/www.wildhunt.by/fullchain.pem. Your cert will
-   expire on 2017-07-20. To obtain a new or tweaked version of this
-   certificate in the future, simply run letsencrypt-auto again. To
-   non-interactively renew *all* of your certificates, run
-   "letsencrypt-auto renew"
+Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/www.wildhunt.by/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/www.wildhunt.by/privkey.pem
 
 Convert pem key:
-sudo openssl rsa -inform pem -in /etc/letsencrypt/live/www.wildhunt.by/privkey.pem -outform pem > /Users/eugene/Desktop/privkey_for_google_cloud.pem
-sudo cp /etc/letsencrypt/live/www.wildhunt.by/cert.pem /Users/eugene/Desktop/
+> sudo openssl rsa -inform pem -in /etc/letsencrypt/live/www.wildhunt.by/privkey.pem -outform pem > /Users/eugene/Desktop/privkey_for_google_cloud.pem
+> sudo cp /etc/letsencrypt/live/www.wildhunt.by/cert.pem /Users/eugene/Desktop/
 
 Upload both cert.pem and privkey_for_google_cloud.pem at Appengine Setting page https://console.developers.google.com/appengine/settings/certificates?project=&moduleId=default
 
