@@ -36,6 +36,7 @@ Please enter in your domain name(s) (comma  and/or space separated) : [[[ www.wi
 
 So make manually this:
 - Add needed values to LetsencryptServlet.java
+- Run 'gcloud config configurations activate wildhuntby' and 'gcloud config set account admin@wildhunt.by'
 - Then deploy by 'gradle appengineDeploy'
 - Check by 'curl -v -X GET http://www.wildhunt.by/.well-known/acme-challenge/XXXXXX' or check URL in browser
 - ONLY AFTER PUSH ENTER
