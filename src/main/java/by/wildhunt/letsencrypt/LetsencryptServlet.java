@@ -9,8 +9,8 @@ import java.util.Map;
 
 public class LetsencryptServlet extends HttpServlet {
     static final String PREFIX = "/.well-known/acme-challenge/";
-    static final String KEY = "Kz7yeMLOO5XG-KuHCC547Zam6kJ6RHPv_T8lMW_54Sk";
-    static final String VALUE = "Kz7yeMLOO5XG-KuHCC547Zam6kJ6RHPv_T8lMW_54Sk.j_gc0OsBVK1hT47GVnksPMuNA5plGOCt_fXOLDSwFJY";
+    static final String KEY = "k4LOsvejywdiFlPfqVN7EhMgqcVtxpvMwrAHwZtzquU";
+    static final String VALUE = "k4LOsvejywdiFlPfqVN7EhMgqcVtxpvMwrAHwZtzquU.849p1-Re6cW4R3364lP54zhQpAs5JoqzPBBeQHGM2oc";
 
     private static final Map<String, String> challenges = new HashMap<>();
 

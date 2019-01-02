@@ -22,6 +22,9 @@ apply plugin: 'java'                              // standard Java tasks
 apply plugin: 'war'                               // standard Web Archive plugin
 apply plugin: 'com.google.cloud.tools.appengine'  // App Engine tasks
 
+appengine.deploy.projectId = 'wildhuntby'
+appengine.deploy.version = 'GCLOUD_CONFIG'
+
 dependencies {
     providedCompile group: 'javax.servlet', name: 'servlet-api', version: '2.5'
     compile 'com.google.appengine:appengine:+'
@@ -47,5 +50,5 @@ appengine {
 group = 'by.wildhunt'      // Generated output GroupId
 version = '1.0-SNAPSHOT'   // Version in generated output
 
-sourceCompatibility = 1.7  // App Engine Standard uses Java 7
-targetCompatibility = 1.7  // App Engine Standard uses Java 7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8

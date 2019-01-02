@@ -47,8 +47,8 @@ Congratulations! Your certificate and chain have been saved at:
    /etc/letsencrypt/live/www.wildhunt.by/privkey.pem
 
 Convert pem key:
-> sudo openssl rsa -inform pem -in /etc/letsencrypt/live/www.wildhunt.by/privkey.pem -outform pem > /Users/eugene/Desktop/privkey_for_google_cloud.pem
-> sudo cp /etc/letsencrypt/live/www.wildhunt.by/cert.pem /Users/eugene/Desktop/
+> sudo openssl rsa -inform pem -in /etc/letsencrypt/live/www.wildhunt.by/privkey.pem -outform pem > ~/Desktop/privkey_for_google_cloud.pem
+> sudo cp /etc/letsencrypt/live/www.wildhunt.by/cert.pem ~/Desktop/
 
 Upload both cert.pem and privkey_for_google_cloud.pem at Appengine Setting page https://console.developers.google.com/appengine/settings/certificates?project=&moduleId=default
 
