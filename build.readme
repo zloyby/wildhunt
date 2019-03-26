@@ -1,4 +1,4 @@
-Commands of Google Cloud
+----------------------------------------------Commands of Google Cloud---------------------------
 
 > gcloud init
 
@@ -9,7 +9,7 @@ Commands of Google Cloud
 > gcloud config configurations activate CONFIGURATION_NAME
 > gcloud config configurations delete CONFIGURATION_NAME
 
-------------------------------------------------------------------------------------------
+-----------------------------------------------Commands-------------------------------------------
 
 Run locally from CLI:
 > gradle tasks
@@ -22,7 +22,7 @@ Deploy on production:
 View logs from production:
 > gcloud app logs read -s default
 
-------------------------------------------------------------------------------------------
+-----------------------------------------MACOS---------------------------------------------------
 
 SSL certificate installation:
 See https://medium.com/google-cloud/lets-encrypt-and-google-app-engine-in-2017-7cfe0928768e
@@ -50,6 +50,30 @@ Convert pem key:
 > sudo openssl rsa -inform pem -in /etc/letsencrypt/live/www.wildhunt.by/privkey.pem -outform pem > ~/Desktop/privkey_for_google_cloud.pem
 > sudo cp /etc/letsencrypt/live/www.wildhunt.by/cert.pem ~/Desktop/
 
-Upload both cert.pem and privkey_for_google_cloud.pem at Appengine Setting page https://console.developers.google.com/appengine/settings/certificates?project=&moduleId=default
+--------------------------------------LINUX------------------------------------------------------
+> sudo certbot certonly --manual
+
+Please enter in your domain name(s) (comma  and/or space separated) : [[[ www.wildhunt.by ]]]
+
+!!! DO NOT PUSH ENTER NOW !!!
+
+So make manually this:
+- Add needed values to LetsencryptServlet.java
+- Setup IDEA plugin
+- Run IDEA task  'Google App Engine Deploy'
+- Check by 'curl -v -X GET http://www.wildhunt.by/.well-known/acme-challenge/XXXXXX' or check URL in browser
+- ONLY AFTER PUSH ENTER
+
+- Congratulations! Your certificate and chain have been saved at:
+   /etc/letsencrypt/live/www.wildhunt.by/fullchain.pem
+   Your key file has been saved at:
+   /etc/letsencrypt/live/www.wildhunt.by/privkey.pem
+
+Convert pem key:
+> sudo openssl rsa -inform pem -in /etc/letsencrypt/live/www.wildhunt.by/privkey.pem -outform pem > ~/Desktop/privkey_for_google_cloud.pem
+> sudo cp /etc/letsencrypt/live/www.wildhunt.by/fullchain.pem ~/Desktop/cert.pem
+
+--------------------------------------------------------------------------------------------------
+Upload both cert.pem and privkey_for_google_cloud.pem at Appengine Setting page https://console.developers.google.com/appengine/settings/certificates?project=wildhuntby&moduleId=default
 
 Now SSL works for https://www.wildhunt.by/
