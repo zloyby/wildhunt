@@ -13,9 +13,9 @@
 
 Run locally from CLI:
 > gradle tasks
-> export JAVA_HOME=`/usr/libexec/java_home -v 1.7` && gradle clean && gradle appengineRun
+> export JAVA_HOME=`/usr/libexec/java_home -v 1.8` && gradle clean && gradle appengineRun
 @ http://localhost:8000/ - admin console
-@ http://localhost:8080/ - web site
+@ http://localhost:8081/ - web site
 
 Deploy on production: 
 > gradle appengineDeploy

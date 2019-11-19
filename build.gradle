@@ -38,7 +38,7 @@ dependencies {
 appengine {
     //noinspection GroovyAssignabilityCheck
     run {      // local configuration (standard environments only)
-        port = 8080
+        port = 8081
     }
 
     deploy {   // deploy configuration
