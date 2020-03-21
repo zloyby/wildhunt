@@ -1,3 +1,6 @@
+<!--
+OUTDATED MAVEN BUILD FILE, USE GRADLE INSTEAD
+-->
 <project>
 	<property name="sdk.dir" location="/Users/eugene/java/appengine-java-sdk-1.9.42"/>
 
@@ -45,12 +48,12 @@
 
 	<target name="request_logs" description="Downloads log data from App Engine for the application.">
 		<appcfg action="request_logs" war="war">
-	  		<options>
-	    		<arg value="--num_days=5"/>
-	  		</options>
-	  		<args>
-	    		<arg value="logs.txt"/>
-	  		</args>
+			<options>
+				<arg value="--num_days=5"/>
+			</options>
+			<args>
+				<arg value="logs.txt"/>
+			</args>
 		</appcfg>
 	</target>
 
