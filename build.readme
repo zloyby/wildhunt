@@ -1,15 +1,22 @@
 --------------------------------------SSL------------------------------------------------------
+Install certbot and run:
 > sudo certbot certonly --manual
+In Windows easier to install Docker and run in PowerShell:
+> docker.exe run -it --rm --name certbot -v "~/.lets:/etc/letsencrypt" -v "~/.lets/lib:/var/lib/letsencrypt" -v "~/.lets/log:/var/log/letsencrypt" certbot/certbot certonly --manual
+
 Please enter in your domain name(s) (comma  and/or space separated) : [[[ www.wildhunt.by ]]]
 !!! DO NOT PUSH ENTER NOW !!!
 
-So make manually this:
+Before you must make changes and deploy:
 - Add needed values to LetsencryptServlet.java
-- Setup IDEA plugin and run task 'Google App Engine Deploy'
---- Or you can use CLI with installed gcloud:
+- Use CLI (with pre-installed gcloud and gradle):
        > gcloud config configurations activate wildhuntby
        > gcloud config set account admin@wildhunt.by
        > gradle appengineDeploy
+-- Or run gradle tasks:
+        > gradle appengineCloudSdkLogin
+        > gradle appengineDeployAll
+--- Or setup IDEA plugin and run task 'Google App Engine Deploy'
 - Check by 'curl -v -X GET http://www.wildhunt.by/.well-known/acme-challenge/XXXXXX' or check URL in browser
 - ONLY AFTER PUSH ENTER
 
@@ -21,6 +28,8 @@ So make manually this:
 Convert pem key:
 > sudo openssl rsa -inform pem -in /etc/letsencrypt/live/www.wildhunt.by/privkey.pem -outform pem > ~/Desktop/privkey_for_google_cloud.pem
 > sudo cp /etc/letsencrypt/live/www.wildhunt.by/fullchain.pem ~/Desktop/cert.pem
+On Windows try to use:
+>  openssl.exe rsa -inform pem -in ~/.lets/archive/www.wildhunt.by/privkey1.pem -outform pem > ~/Desktop/privkey_for_google_cloud.pem
 
 Upload both cert.pem and privkey_for_google_cloud.pem at Appengine Setting page:
 https://console.developers.google.com/appengine/settings/certificates?project=wildhuntby&moduleId=default
