@@ -1,36 +1,18 @@
-// Configuration for building
-buildscript {
-    repositories {
-        mavenCentral()
-    }
-    dependencies {
-        classpath 'org.springframework.boot:spring-boot-gradle-plugin:3.4.3'
-    }
+plugins {
+    alias(libs.plugins.spring.boot)
+    alias(libs.plugins.spring.dependency.management)
+    id 'java'
 }
-
-// Repositories for Jar's you access in your code
-repositories {
-    mavenCentral()
-}
-
-apply plugin: 'java'
-apply plugin: 'org.springframework.boot'
-apply plugin: 'io.spring.dependency-management'
 
 java {
-    sourceCompatibility = '21'
+    sourceCompatibility = libs.versions.java.get()
 }
-
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-web'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.11.4'
-    testImplementation 'org.mockito:mockito-core:5.14.2'
+    implementation libs.spring.boot.starter.web
+    testImplementation libs.spring.boot.starter.test
 }
-
-
 
 test {
     useJUnitPlatform()
 }
-
