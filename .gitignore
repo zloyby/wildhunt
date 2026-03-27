@@ -6,6 +6,7 @@
 .settings
 .gradle
 /build/
+/bin/
 /out/
 /target/
 *.iml
